@@ -8,7 +8,6 @@ import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
 class DeliveryCardTests {
-
     @Test
     void shouldTest1() {
         Configuration.holdBrowserOpen = true;
