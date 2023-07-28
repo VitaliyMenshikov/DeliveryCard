@@ -1,12 +1,9 @@
-
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.Keys;
-
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
-
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -26,6 +23,5 @@ class DeliveryCardTests {
         $x("//*[text()='Я соглашаюсь с условиями обработки и использования моих персональных данных']").click();
         $x("//*[text()='Забронировать']").click();
         $("[data-test-id=notification]").should(text("Встреча успешно забронирована на " + CorrectDate), Duration.ofSeconds(15));
-
     }
 }
